@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import styles from './Coins.module.css';
 import Link from 'next/link';
 
@@ -18,7 +18,7 @@ const Coins = ({
         <div className={styles.coin_container}>
           <div className={styles.coin_row}>
             <div className={styles.coin}>
-              <img src={image} alt={name} className={styles.coin_img} />
+              <Image src={image} alt={name} className={styles.coin_img} width={45} height={45} />
               <h1 className={styles.coin_h1}>{name}</h1>
               <p className={styles.coin_symbol}>{symbol}</p>
             </div>
